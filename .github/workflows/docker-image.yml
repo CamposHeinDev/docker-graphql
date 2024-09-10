@@ -26,3 +26,11 @@ jobs:
         echo "inicio del loginazo"
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
         echo "fin del loginazo"
+        
+    - name: Build docker image
+      run: |
+        docker build -t franciscochdev/graphql-actions:0.0.2 .
+
+    - name: Push docker image
+      run: |
+        docker push -t franciscochdev/graphql-actions:0.0.2 .
