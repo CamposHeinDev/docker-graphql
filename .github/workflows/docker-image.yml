@@ -30,7 +30,9 @@ jobs:
     - name: Build docker image
       run: |
         docker build -t franciscochdev/graphql-actions:0.0.2 .
+        docker build -t franciscochdev/graphql-actions:latest .
 
     - name: Push docker image
       run: |
         docker push franciscochdev/graphql-actions:0.0.2
+        docker push franciscochdev/graphql-actions:latest
